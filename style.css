@@ -1,0 +1,355 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+.flex{
+    display: flex;
+}
+body{
+    background-color: #F2F0F3;
+    font-family: 'Montserrat', sans-serif;
+    color: #777777;
+    font-style: regular;
+    font-size: clamp(16px, 10vw, 18px);
+    line-height: 1.5;
+    cursor: none;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+img{
+    object-fit: cover;
+    display: block;
+    max-width: 100%; /* will shrink if not enough space */
+}
+div{
+    height: auto;
+}
+h1{
+    font-size: clamp(24px, 10vw, 48px);
+}
+h2{
+    font-size: clamp(22px, 10vw, 32px);
+}
+h3{
+    font-size: clamp(18px, 10vw, 28px);
+}
+p{
+    font-size: clamp(16px, 10vw, 18px);
+}
+.white{
+    color: #FFFFFF;
+}
+.red{
+    color: #E85F5B;
+}
+.green{
+    color: #53A790;
+}
+.blue{
+    color: #2445A2;
+}
+a{
+    text-decoration: none;
+    color: #2445A2;
+}
+a:hover{
+    color: #FFFFFF;
+}
+
+/* OFFRE */
+.offre{
+    /* height: 60vh; */
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    /* border: 2px red solid; */
+}
+.offre h2{
+    color: #53A790;
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+.offre-blocks{
+    justify-content: space-between;
+    /* border: 2px purple solid; */
+}
+.offre-design, .offre-suivi, .offre-tarifs{
+    flex-direction: column;
+    width: 352px;
+    height: 310px;
+    background-color: #FFFFFF;
+    text-align: center;
+    padding: 2%;;
+    border: #53A790 solid 1px;
+}
+.offre-design h3, .offre-suivi h3, .offre-tarifs h3{
+    flex-direction: column;
+    justify-content: center;
+    height: 180px;
+}
+.offre-design p, .offre-suivi p, .offre-tarifs p{
+    flex-direction: column;
+    justify-content: center;
+    height: 130px;
+}
+hr{
+    width: 80%;
+    border: #53A790 solid 1px;
+    align-self: center;
+}
+
+/* PROJET */
+.projet{
+    height: 60vh;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10%;
+    padding-bottom: 5%;
+}
+/* .projet-gallerie{
+    min-width: 700px;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-auto-rows: 200px;
+    grid-auto-flow: dense;
+    padding-left: 0;
+    border: 2px lime solid;
+} */
+.projet-gallerie{
+    width: 52vw;
+    display: grid;
+    grid-gap: 2%;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+    "restaurant restaurant bureaux bureaux coworking"
+    "bar bar hotel cafe cafe";
+}
+.restaurant{
+    grid-area: restaurant;
+}
+.bureaux{
+    grid-area: bureaux;
+}
+.coworking{
+    grid-area: coworking;
+}
+.bar{
+    grid-area: bar;
+}
+.hotel{
+    grid-area: hotel;
+}
+.cafe{
+    grid-area: cafe;
+}
+.gallerie-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.restaurant, .bureaux, .coworking, .bar, .hotel, .cafe{
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+.projet-texte{
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 352px;
+    height: 80%;
+    text-align: center;
+}
+.projet-texte p{
+    text-align: left;
+}
+.projet-texte button{
+    width: 60%;
+    border: none;
+    background-color: #53A790;
+    padding: 1% 3% 1% 3%;
+    transition: background-color .5s;
+    font-family: 'Montserrat', sans-serif;
+    color: #FFFFFF;
+    font-size: clamp(16px, 10vw, 18px);
+    line-height: 30px;
+    justify-content: center;
+    align-self: center;
+}
+.projet-texte button:hover{
+    background-color: #E85F5B;
+    cursor: pointer;
+}
+
+/* PRODUITS */
+.produits{
+    height: 60vh;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 5%;
+    padding-bottom: 10%;
+}
+.produits h3{
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+.produits h3 a{
+    color: #53A790;
+}
+.produits a:hover{
+    color: #E85F5B;
+}
+.produits p a{
+    color: #777777;
+}
+.produits-gallerie{
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.produits-gallerie p{
+    text-align: center;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 1280px){
+    .offre-design, .offre-suivi, .offre-tarifs{
+        flex-direction: column;
+        width: 300px;
+        height: 350px;
+    }
+    .offre-design h3, .offre-suivi h3, .offre-tarifs h3{
+        height: 220px;
+    }
+    .offre-design p, .offre-suivi p, .offre-tarifs p{
+        height: 130px;
+    }
+    .projet-texte{
+        width: 300px;
+        height: 95%;
+    }
+}
+@media screen and (max-width: 1024px){
+    .offre-design, .offre-suivi, .offre-tarifs, .projet-texte{
+        width: 250px;
+    }
+    .projet {
+        height: 80vh;
+    }
+    .projet-texte button{
+        width: 80%;
+    }
+}
+@media screen and (max-width: 820px){ /* iPad air */
+    .offre-design, .offre-suivi, .offre-tarifs{
+        width: 210px;
+        height: 350px;
+    }
+    .projet{
+        flex-direction: column-reverse;
+        height: 67vh;
+    }
+    .projet-texte{
+        width: 100%;
+        height: 18vh;
+    }
+    .projet-texte button{
+        width: 40%;
+    }
+    .projet-gallerie {
+        width: 100%;
+    }
+    .produits{
+        height: auto;
+    }
+}
+@media screen and (max-width: 540px){ /* Surface Duo */
+    .offre{
+        height: 180vh;
+    }
+    .offre-blocks{
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        height: 150vh;
+    }
+    .offre-design, .offre-suivi, .offre-tarifs{
+        width: 320px;
+        height: 310px;
+    }
+    .projet{
+        height: 85vh;
+    }
+    .projet-texte{
+        height: 30vh;
+    }
+}
+@media screen and (max-width: 414px){ /* iPhone XR */
+    .offre{
+        height: 140vh;
+    }
+    .offre-blocks{
+        height: 120vh;
+    }
+    .projet{
+        height: 150vh;
+    }
+    .projet-texte{
+        height: 25%;
+    }
+    .projet-texte button{
+        width: 65%;
+        margin-bottom: 10%;
+    }
+    .projet-gallerie{
+        width: 100%;
+        grid-gap: 2%;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-areas:
+        "restaurant"
+        "bureaux"
+        "bar"
+        "cafe";
+    }
+    .hotel, .coworking{
+        display: none;
+    }
+    .produits{
+        padding-top: 30%;
+    }
+}
+@media screen and (max-width: 390px){ /* iPhone 12 Pro */
+
+}
+@media screen and (max-width: 375px){ /* iPhone SE */
+    .offre{
+        height: 170vh;
+    }
+    .offre-blocks{
+        height: 150vh;
+    }
+    .projet{
+        height: 190vh;
+    }
+}
+@media screen and (max-width: 360px){ /* Samsung Glaxy S8 */
+    .offre{
+        height: 160vh;
+    }
+    .offre-blocks{
+        height: 140vh;
+    }
+    .projet{
+        height: 165vh;
+    }
+}
