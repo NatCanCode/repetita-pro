@@ -54,7 +54,7 @@ p{
 }
 a{
     text-decoration: none;
-    color: #2445A2;
+    color: #FFFFFF;
 }
 a:hover{
     color: #FFFFFF;
@@ -170,6 +170,10 @@ hr{
 }
 .projet-texte p{
     text-align: left;
+}
+.projet-texte a{
+    text-decoration: none;
+    color: #FFFFFF;
 }
 .projet-texte button{
     width: 60%;
